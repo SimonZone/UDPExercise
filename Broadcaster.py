@@ -12,7 +12,7 @@ sender = "SS Speedtrap"
 while True:
     speed = random.randint(53, 80)
 
-    speedInfo = {"SensorName": sender, "Speed": speed}
+    speedInfo = {"sensorName": sender, "speed": speed}
     speedInfoJson = json.dumps(speedInfo)
 
     clientSocket.sendto(speedInfoJson.encode(), (serverName, serverPort))
